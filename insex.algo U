@@ -1,0 +1,34 @@
+Algorithme analysePhrase()
+    // Déclaration des variables
+    phrase <- "Georges est toujours en retard."
+    longueurPhrase <- 0
+    nombreMots <- 0
+    nombreVoyelles <- 0
+    voyelles <- ["a", "e", "i", "o", "u", "y"]
+
+    
+    Pour chaque caractère char dans phrase Faire
+       
+        longueurPhrase <- longueurPhrase + 1
+
+        // Vérifier si le caractère est une lettre
+        Si char est une lettre Alors
+            // Vérifier si c'est le début d'un nouveau mot
+            Si (char est différent de " " ET caractère précédent est un espace) Alors
+                nombreMots <- nombreMots + 1
+
+            // Vérifier si le caractère est une voyelle
+            Si voyelles contient char (en minuscule) Alors
+                nombreVoyelles <- nombreVoyelles + 1
+        Fin Si
+    Fin Pour
+
+    // Afficher les résultats
+    Afficher "Phrase analysée :", phrase
+    Afficher "Longueur de la phrase :", longueurPhrase
+    Afficher "Nombre de mots :", nombreMots
+    Afficher "Nombre de voyelles :", nombreVoyelles
+Fin Algorithme
+
+// Appel de la fonction principale
+analysePhrase()
